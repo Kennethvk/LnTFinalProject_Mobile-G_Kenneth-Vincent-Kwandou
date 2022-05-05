@@ -56,8 +56,8 @@ public class Login extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(getActivity(), "Successfully Logged In!", Toast.LENGTH_SHORT).show();
-//                            Intent go_to_home = new Intent(getActivity(), Home.class);
-//                            startActivity(go_to_home);
+                            Intent go_to_home = new Intent(getActivity(), Home.class);
+                            startActivity(go_to_home);
                         }else{
                             Toast.makeText(getActivity(), "Error:\n" + task.getException(), Toast.LENGTH_SHORT).show();
                         }
@@ -103,8 +103,5 @@ public class Login extends Fragment {
 
         regis_page.setOnClickListener(go_to_register);
         login_btn.setOnClickListener(login_account);
-        // hhhhhhaaaaaappusssssssss
-        Intent go_to_home = new Intent(getActivity(), Home.class);
-        startActivity(go_to_home);
     }
 }
