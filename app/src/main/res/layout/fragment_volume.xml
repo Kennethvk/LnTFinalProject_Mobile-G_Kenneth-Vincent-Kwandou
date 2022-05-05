@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VolumeFragment">
+
+    <TextView
+        android:id="@+id/vol_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume calculator"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/balok_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/cuboid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vol_txt" />
+
+    <TextView
+        android:id="@+id/balok_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume Balok:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="@id/balok_img"
+        app:layout_constraintStart_toEndOf="@+id/balok_img"
+        app:layout_constraintBottom_toTopOf="@id/balok_calc"/>
+
+    <TextView
+        android:id="@+id/balok_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="l x w x h = ?"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toTopOf="@id/balok_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/balok_img"
+        app:layout_constraintTop_toBottomOf="@+id/balok_txt" />
+
+    <TextView
+        android:id="@+id/balok_enter_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="l = "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/balok_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/balok_img"
+        app:layout_constraintTop_toBottomOf="@+id/balok_calc" />
+
+    <EditText
+        android:id="@+id/balok_enter_input1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="value"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:backgroundTint="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/balok_enter_txt1"
+        app:layout_constraintStart_toEndOf="@+id/balok_enter_txt1"
+        app:layout_constraintTop_toBottomOf="@+id/balok_calc" />
+
+    <TextView
+        android:id="@+id/balok_enter_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="w = "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/balok_enter_input2"
+        app:layout_constraintStart_toEndOf="@+id/balok_img"
+        app:layout_constraintTop_toBottomOf="@+id/balok_enter_input1" />
+
+    <EditText
+        android:id="@+id/balok_enter_input2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="value"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:backgroundTint="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/balok_enter_txt2"
+        app:layout_constraintStart_toEndOf="@+id/balok_enter_txt2"
+        app:layout_constraintTop_toBottomOf="@+id/balok_enter_input1" />
+
+    <TextView
+        android:id="@+id/balok_enter_txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="h = "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/balok_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/balok_enter_input1"
+        app:layout_constraintTop_toBottomOf="@+id/balok_calc" />
+
+    <EditText
+        android:id="@+id/balok_enter_input3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:hint="value"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/balok_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/balok_enter_txt3"
+        app:layout_constraintTop_toBottomOf="@+id/balok_calc" />
+
+    <Button
+        android:id="@+id/balok_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0274D9"
+        android:text="Calculate"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balok_enter_input2" />
+
+    <ImageView
+        android:id="@+id/pira_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/pyramid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balok_btn" />
+
+    <TextView
+        android:id="@+id/pira_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume Piramid:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toEndOf="@+id/pira_img"
+        app:layout_constraintTop_toTopOf="@+id/pira_img"
+        app:layout_constraintBottom_toTopOf="@id/pira_calc"/>
+
+    <TextView
+        android:id="@+id/pira_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(l x w x h)/3 = ?"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toTopOf="@id/pira_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/pira_img"
+        app:layout_constraintTop_toBottomOf="@+id/pira_txt" />
+
+    <TextView
+        android:id="@+id/pira_enter_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="l = "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pira_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/pira_img"
+        app:layout_constraintTop_toBottomOf="@+id/pira_calc" />
+
+    <EditText
+        android:id="@+id/pira_enter_input1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="value"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:backgroundTint="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pira_enter_txt1"
+        app:layout_constraintStart_toEndOf="@+id/pira_enter_txt1"
+        app:layout_constraintTop_toBottomOf="@+id/pira_calc" />
+
+    <TextView
+        android:id="@+id/pira_enter_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="w = "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pira_enter_input2"
+        app:layout_constraintStart_toEndOf="@+id/pira_img"
+        app:layout_constraintTop_toBottomOf="@+id/pira_enter_input1" />
+
+    <EditText
+        android:id="@+id/pira_enter_input2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="value"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:backgroundTint="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pira_enter_txt2"
+        app:layout_constraintStart_toEndOf="@+id/pira_enter_txt2"
+        app:layout_constraintTop_toBottomOf="@+id/pira_enter_input1" />
+
+    <TextView
+        android:id="@+id/pira_enter_txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="h = "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pira_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/pira_enter_input1"
+        app:layout_constraintTop_toBottomOf="@+id/pira_calc" />
+
+    <EditText
+        android:id="@+id/pira_enter_input3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:hint="value"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pira_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/pira_enter_txt3"
+        app:layout_constraintTop_toBottomOf="@+id/pira_calc" />
+
+    <Button
+        android:id="@+id/pira_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0274D9"
+        android:text="Calculate"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pira_enter_input2" />
+
+    <ImageView
+        android:id="@+id/tabu_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/cylinder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pira_btn" />
+
+    <TextView
+        android:id="@+id/tabu_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume Tabung:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="@id/tabu_img"
+        app:layout_constraintStart_toEndOf="@+id/tabu_img"
+        app:layout_constraintBottom_toTopOf="@id/tabu_calc"/>
+
+    <TextView
+        android:id="@+id/tabu_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3,14 x r x r x h = ?"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toTopOf="@id/tabu_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/tabu_img"
+        app:layout_constraintTop_toBottomOf="@+id/tabu_txt" />
+
+    <TextView
+        android:id="@+id/tabu_enter_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="r = "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tabu_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/tabu_img"
+        app:layout_constraintTop_toBottomOf="@+id/tabu_calc" />
+
+    <EditText
+        android:id="@+id/tabu_enter_input1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="value"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:backgroundTint="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tabu_enter_txt1"
+        app:layout_constraintStart_toEndOf="@+id/tabu_enter_txt1"
+        app:layout_constraintTop_toBottomOf="@+id/tabu_calc" />
+
+    <TextView
+        android:id="@+id/tabu_enter_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="h = "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tabu_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/tabu_enter_input1"
+        app:layout_constraintTop_toBottomOf="@+id/tabu_calc" />
+
+    <EditText
+        android:id="@+id/tabu_enter_input2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:hint="value"
+        android:textColor="@color/black"
+        android:textColorHint="#808080"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tabu_enter_input1"
+        app:layout_constraintStart_toEndOf="@+id/tabu_enter_txt2"
+        app:layout_constraintTop_toBottomOf="@+id/tabu_calc" />
+
+    <Button
+        android:id="@+id/tabu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0274D9"
+        android:text="Calculate"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabu_enter_input1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
